@@ -95,25 +95,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-T4-VjJ">
-                                <rect key="frame" x="78" y="133" width="275" height="18"/>
+                                <rect key="frame" x="64" y="88" width="300" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-nM-ZDl">
-                                <rect key="frame" x="135" y="519.66666666666663" width="159" height="33.333333333333371"/>
-                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kz-G6-PbV">
+                                <rect key="frame" x="154" y="364" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-nM-ZDl">
+                                <rect key="frame" x="144" y="678" width="120" height="42"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Log out">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="PTSerif-Bold"/>
+                                                <font key="NSFont" size="24" name="PTSerif-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Ext-et-WUA" kind="unwind" unwindAction="unwindFor:" id="VTI-uE-1Om"/>
@@ -121,15 +127,17 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tq6-us-Uyv"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="bottom" secondItem="xZf-nM-ZDl" secondAttribute="bottom" constant="339" id="1XY-M2-bYf"/>
-                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="trailing" secondItem="xZf-nM-ZDl" secondAttribute="trailing" constant="134" id="ESH-XA-Exe"/>
-                            <constraint firstItem="b7P-T4-VjJ" firstAttribute="top" secondItem="Tq6-us-Uyv" secondAttribute="top" constant="45" id="QKg-fm-83S"/>
-                            <constraint firstItem="xZf-nM-ZDl" firstAttribute="top" secondItem="b7P-T4-VjJ" secondAttribute="bottom" constant="368.67000000000002" id="Qed-UO-UQu"/>
-                            <constraint firstItem="xZf-nM-ZDl" firstAttribute="leading" secondItem="Tq6-us-Uyv" secondAttribute="leading" constant="135" id="YBS-j1-VqY"/>
-                            <constraint firstItem="b7P-T4-VjJ" firstAttribute="leading" secondItem="Tq6-us-Uyv" secondAttribute="leading" constant="78" id="gX4-gl-Mtw"/>
-                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="trailing" secondItem="b7P-T4-VjJ" secondAttribute="trailing" constant="75" id="hfi-RN-lIR"/>
+                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="trailing" secondItem="b7P-T4-VjJ" secondAttribute="trailing" constant="64" id="CN7-8c-tGb"/>
+                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="trailing" secondItem="xZf-nM-ZDl" secondAttribute="trailing" constant="164" id="LAE-jV-4XC"/>
+                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="bottom" secondItem="xZf-nM-ZDl" secondAttribute="bottom" constant="172" id="MME-2J-x2Z"/>
+                            <constraint firstItem="6kz-G6-PbV" firstAttribute="leading" secondItem="Tq6-us-Uyv" secondAttribute="leading" constant="154" id="YzF-YX-VnK"/>
+                            <constraint firstItem="xZf-nM-ZDl" firstAttribute="leading" secondItem="Tq6-us-Uyv" secondAttribute="leading" constant="144" id="ZiL-nB-Y2J"/>
+                            <constraint firstItem="b7P-T4-VjJ" firstAttribute="leading" secondItem="Tq6-us-Uyv" secondAttribute="leading" constant="64" id="cIS-ML-ZV9"/>
+                            <constraint firstItem="xZf-nM-ZDl" firstAttribute="top" secondItem="6kz-G6-PbV" secondAttribute="bottom" constant="214" id="cmj-tD-aWH"/>
+                            <constraint firstItem="Tq6-us-Uyv" firstAttribute="trailing" secondItem="6kz-G6-PbV" secondAttribute="trailing" constant="174" id="e16-xX-YqR"/>
+                            <constraint firstItem="b7P-T4-VjJ" firstAttribute="top" secondItem="Tq6-us-Uyv" secondAttribute="top" id="fQr-Ta-lga"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aRb-0Q-DN1"/>
@@ -162,11 +170,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
