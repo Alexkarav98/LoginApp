@@ -14,11 +14,6 @@ class LoginViewController: UIViewController {
     
     private let login = "User"
     private let password = "User123"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,14 +30,18 @@ class LoginViewController: UIViewController {
         if loginTF.text == "" || passwordTF.text == "" {
             showAllert(title: "Password or login is empty",
                        message: "Please, insert your login or password")
-        } else if loginTF.text != login && passwordTF.text != password {
+        } else if loginTF.text != login || passwordTF.text != password {
             showAllert(title: "Invalid login or password",
                        message: "Please enter correct login and password",
                        textField: passwordTF)
-        } else if loginTF.text == login && passwordTF.text == password {
-            
         }
         
+    }
+    
+    // MARK: Hide keyboard aftertouches
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func forgotUNButtonPressed() {
@@ -59,20 +58,16 @@ class LoginViewController: UIViewController {
                                       message: message,
                                       preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                   textField?.text = ""
-               }
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default) { _ in
+            textField?.text = ""
+        }
         
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
 
-// MARK: Hide keyboard aftertouches
-extension LoginViewController: UITextFieldDelegate {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-}
+
+
 
