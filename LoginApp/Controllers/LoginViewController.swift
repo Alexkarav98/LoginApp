@@ -22,7 +22,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard segue.source is LoginViewController else { return }
+        loginTF.text = ""
+        passwordTF.text = ""
     }
 
     //MARK: IBActions
@@ -34,6 +35,8 @@ class LoginViewController: UIViewController {
             showAllert(title: "Invalid login or password",
                        message: "Please enter correct login and password",
                        textField: passwordTF)
+        } else if loginTF.text == login && passwordTF.text == password {
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         
     }

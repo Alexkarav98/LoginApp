@@ -22,7 +22,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVW-2G-4jg"/>
-                                    <segue destination="zxi-rV-irK" kind="show" id="vp2-xc-l83"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KVf-rc-f1s">
@@ -82,6 +81,7 @@
                     <connections>
                         <outlet property="loginTF" destination="4oG-g6-oxc" id="sjo-wZ-gSc"/>
                         <outlet property="passwordTF" destination="dJK-ze-DTR" id="DtM-iW-1fW"/>
+                        <segue destination="zxi-rV-irK" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="7Sa-ih-JHC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-T4-VjJ">
-                                <rect key="frame" x="64" y="44" width="286" height="18"/>
+                                <rect key="frame" x="64" y="0.0" width="286" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
