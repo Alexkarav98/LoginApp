@@ -11,11 +11,11 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeTextLabel: UILabel!
     
-    var login: String!
+    var fullName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeTextLabel.text = "Welcome, \(login ?? "Undefined User") !"
+        welcomeTextLabel.text = "Welcome, \(fullName ?? "Undefined User") !"
     }
     
 }

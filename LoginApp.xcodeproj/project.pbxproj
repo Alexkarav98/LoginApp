@@ -14,6 +14,8 @@
 		0B653D8D286EDBEF00A6FCF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B653D8B286EDBEF00A6FCF1 /* Main.storyboard */; };
 		0B653D8F286EDBF000A6FCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B653D8E286EDBF000A6FCF1 /* Assets.xcassets */; };
 		0B653D92286EDBF000A6FCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B653D90286EDBF000A6FCF1 /* LaunchScreen.storyboard */; };
+		0B9465C6287498E5007D3366 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9465C5287498E5007D3366 /* User.swift */; };
+		0B9465C828749FEB007D3366 /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9465C728749FEB007D3366 /* AboutUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0B653D8E286EDBF000A6FCF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B653D91286EDBF000A6FCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B653D93286EDBF000A6FCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9465C5287498E5007D3366 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B9465C728749FEB007D3366 /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,15 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B584D43286EF629003A96FD /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0B653D89286EDBEF00A6FCF1 /* LoginViewController.swift */,
-				0B584D3F286EEAB1003A96FD /* WelcomeViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		0B653D79286EDBEF00A6FCF1 = {
 			isa = PBXGroup;
 			children = (
@@ -67,15 +62,42 @@
 		0B653D84286EDBEF00A6FCF1 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				0B584D43286EF629003A96FD /* Controllers */,
-				0B653D85286EDBEF00A6FCF1 /* AppDelegate.swift */,
-				0B653D87286EDBEF00A6FCF1 /* SceneDelegate.swift */,
+				0B9465C4287498D6007D3366 /* Models */,
+				0B9465C3287498A9007D3366 /* ViewControllers */,
+				0B9465C22874985C007D3366 /* App */,
 				0B653D8B286EDBEF00A6FCF1 /* Main.storyboard */,
 				0B653D8E286EDBF000A6FCF1 /* Assets.xcassets */,
 				0B653D90286EDBF000A6FCF1 /* LaunchScreen.storyboard */,
 				0B653D93286EDBF000A6FCF1 /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		0B9465C22874985C007D3366 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0B653D85286EDBEF00A6FCF1 /* AppDelegate.swift */,
+				0B653D87286EDBEF00A6FCF1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0B9465C3287498A9007D3366 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B584D3F286EEAB1003A96FD /* WelcomeViewController.swift */,
+				0B653D89286EDBEF00A6FCF1 /* LoginViewController.swift */,
+				0B9465C728749FEB007D3366 /* AboutUserViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0B9465C4287498D6007D3366 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B9465C5287498E5007D3366 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +174,9 @@
 				0B653D8A286EDBEF00A6FCF1 /* LoginViewController.swift in Sources */,
 				0B584D40286EEAB1003A96FD /* WelcomeViewController.swift in Sources */,
 				0B653D86286EDBEF00A6FCF1 /* AppDelegate.swift in Sources */,
+				0B9465C6287498E5007D3366 /* User.swift in Sources */,
 				0B653D88286EDBEF00A6FCF1 /* SceneDelegate.swift in Sources */,
+				0B9465C828749FEB007D3366 /* AboutUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

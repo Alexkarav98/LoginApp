@@ -12,13 +12,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let login = "User"
-    private let password = "User123"
+    private let user = User(login: "User", password: "User123")
 
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.login = login
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let firstVC = viewController as? WelcomeViewController {
+                firstVC.fullName =  user.fullName
+            } else if let secondVC = viewController as? AboutUserViewController {
+                secondVC.fullName = user.fullName
+            }
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -31,12 +38,12 @@ class LoginViewController: UIViewController {
         if loginTF.text == "" || passwordTF.text == "" {
             showAllert(title: "Password or login is empty",
                        message: "Please, insert your login or password")
-        } else if loginTF.text != login || passwordTF.text != password {
+        } else if loginTF.text != user.login || passwordTF.text != user.password {
             showAllert(title: "Invalid login or password",
                        message: "Please enter correct login and password",
                        textField: passwordTF)
-        } else if loginTF.text == login && passwordTF.text == password {
-            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        } else if loginTF.text == user.login && passwordTF.text == user.password {
+            
         }
         
     }
@@ -48,11 +55,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUNButtonPressed() {
-        showAllert(title: "Hi, Mate!", message: "Your name is \(login)")
+        showAllert(title: "Hi, Mate!", message: "Your name is \(user.login)")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAllert(title: "Hi, Mate!", message: "Your password is \(password)")
+        showAllert(title: "Hi, Mate!", message: "Your password is \(user.password)")
     }
     
     //MARK: Private functions
