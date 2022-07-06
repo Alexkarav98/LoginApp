@@ -11,5 +11,5 @@ struct User {
     let login: String
     let password: String
     let fullName = "Alexander Karavaev"
-    let information = ""
+    var information = ""
 }

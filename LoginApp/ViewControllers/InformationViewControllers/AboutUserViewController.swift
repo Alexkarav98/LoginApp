@@ -19,12 +19,16 @@ class AboutUserViewController: UIViewController {
         fullNameLabel.text = "Welcome, \(user.fullName) !"
         if infoAboutUserTF.text == "" {
             infoAboutUserTF.text = "Edit information about you 😔"
+            infoAboutUserTF.sizeToFit()
         }
+        infoAboutUserTF.font = infoAboutUserTF.font.withSize(20)
     }
 
+    
+    //MARK: Nafigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let infoVc = segue.destination as? InformationAboutUserViewController else { return }
-        infoVc.user = user
+        guard let infoVC = segue.destination as? InformationAboutUserViewController else { return }
+        infoVC.user = user
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

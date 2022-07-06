@@ -96,8 +96,8 @@
 		0B9465C3287498A9007D3366 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0B584D3F286EEAB1003A96FD /* WelcomeViewController.swift */,
 				0B653D89286EDBEF00A6FCF1 /* LoginViewController.swift */,
+				0B584D3F286EEAB1003A96FD /* WelcomeViewController.swift */,
 				0B228EB3287584B5005DCBC8 /* InformationViewControllers */,
 			);
 			path = ViewControllers;

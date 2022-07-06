@@ -179,8 +179,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Edit info"/>
                                         <connections>
-                                            <action selector="editButtonTapped" destination="88r-8s-kiK" eventType="touchUpInside" id="gvd-Ls-sAz"/>
-                                            <segue destination="sA7-hJ-NE1" kind="show" id="KIT-UL-fmb"/>
+                                            <segue destination="sA7-hJ-NE1" kind="presentation" identifier="editInfo" id="LZz-8M-Irc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -215,51 +214,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="njB-b0-yZ9">
-                                <rect key="frame" x="10" y="100" width="394" height="516"/>
+                                <rect key="frame" x="136" y="268" width="142" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit info about you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPb-pj-w2v">
-                                        <rect key="frame" x="126" y="0.0" width="142" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-5Y-g37">
-                                        <rect key="frame" x="16" y="71.333333333333343" width="362" height="362.66666666666663"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="362.66666666666663" id="iAk-HP-fch"/>
-                                        </constraints>
+                                        <rect key="frame" x="16" y="71.333333333333314" width="110" height="26.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwU-QN-uiK">
-                                        <rect key="frame" x="172.66666666666666" y="485" width="49" height="31"/>
+                                        <rect key="frame" x="46.666666666666657" y="149" width="49" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                         <connections>
-                                            <action selector="editButtonTapped" destination="sA7-hJ-NE1" eventType="touchUpInside" id="vIb-1b-44Q"/>
-                                            <segue destination="SoM-eC-zg6" kind="unwind" unwindAction="unwindFor:" id="Rwp-Xf-pcB"/>
+                                            <action selector="editButtonTapped" destination="sA7-hJ-NE1" eventType="touchUpInside" id="hwN-nz-gRa"/>
+                                            <segue destination="SoM-eC-zg6" kind="unwind" unwindAction="unwindFor:" id="YyR-qk-nRh"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="OZV-5Y-g37" firstAttribute="leading" secondItem="njB-b0-yZ9" secondAttribute="leading" constant="16" id="kRz-Yg-hvK"/>
-                                    <constraint firstAttribute="trailing" secondItem="OZV-5Y-g37" secondAttribute="trailing" constant="16" id="s8u-tP-qiF"/>
+                                    <constraint firstAttribute="trailing" secondItem="OZV-5Y-g37" secondAttribute="trailing" constant="16" id="cHA-xQ-Z0j"/>
+                                    <constraint firstItem="OZV-5Y-g37" firstAttribute="leading" secondItem="njB-b0-yZ9" secondAttribute="leading" constant="16" id="fu9-8F-2kS"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wtK-1v-EA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="njB-b0-yZ9" firstAttribute="leading" secondItem="wtK-1v-EA7" secondAttribute="leading" constant="10" id="Fb5-vf-xsu"/>
-                            <constraint firstItem="njB-b0-yZ9" firstAttribute="top" secondItem="wtK-1v-EA7" secondAttribute="top" constant="100" id="XYh-4A-Of1"/>
-                            <constraint firstItem="wtK-1v-EA7" firstAttribute="trailing" secondItem="njB-b0-yZ9" secondAttribute="trailing" constant="10" id="aYB-dc-Yxh"/>
-                            <constraint firstItem="wtK-1v-EA7" firstAttribute="bottom" secondItem="njB-b0-yZ9" secondAttribute="bottom" constant="100" id="kx1-2c-PVE"/>
+                            <constraint firstItem="njB-b0-yZ9" firstAttribute="centerX" secondItem="wtK-1v-EA7" secondAttribute="centerX" id="Jlh-3k-sH3"/>
+                            <constraint firstItem="njB-b0-yZ9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wtK-1v-EA7" secondAttribute="leading" constant="16" id="ffr-jM-AKd"/>
+                            <constraint firstItem="wtK-1v-EA7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="njB-b0-yZ9" secondAttribute="trailing" constant="16" id="yLc-m5-ePW"/>
+                            <constraint firstItem="njB-b0-yZ9" firstAttribute="centerY" secondItem="wtK-1v-EA7" secondAttribute="centerY" id="zfa-oE-qM9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ytc-u8-tpL"/>
                     <connections>
-                        <outlet property="editButtonTapped" destination="GwU-QN-uiK" id="iy0-HV-HzW"/>
-                        <outlet property="editInfoTF" destination="OZV-5Y-g37" id="ziU-Hk-N0f"/>
+                        <outlet property="editInfoTF" destination="OZV-5Y-g37" id="aJp-yk-JZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsc-7m-hLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

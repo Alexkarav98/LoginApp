@@ -15,6 +15,6 @@ class InformationAboutUserViewController: UIViewController {
     var user: User!
     
     @IBAction func editButtonTapped() {
-        editInfoTF.text = user.information
+        user.information = editInfoTF.text ?? ""
     }
 }
