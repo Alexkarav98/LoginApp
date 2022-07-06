@@ -179,7 +179,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Edit info"/>
                                         <connections>
-                                            <segue destination="sA7-hJ-NE1" kind="presentation" identifier="editInfo" id="LZz-8M-Irc"/>
+                                            <segue destination="sA7-hJ-NE1" kind="presentation" identifier="editInfo" modalPresentationStyle="fullScreen" id="LZz-8M-Irc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -210,11 +210,11 @@
             <objects>
                 <viewController id="sA7-hJ-NE1" customClass="InformationAboutUserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l2p-iL-g0h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="njB-b0-yZ9">
-                                <rect key="frame" x="136" y="268" width="142" height="180"/>
+                                <rect key="frame" x="136" y="278" width="142" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit info about you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPb-pj-w2v">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="20.333333333333332"/>
