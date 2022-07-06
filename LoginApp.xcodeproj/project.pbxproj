@@ -16,6 +16,7 @@
 		0B653D92286EDBF000A6FCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B653D90286EDBF000A6FCF1 /* LaunchScreen.storyboard */; };
 		0B9465C6287498E5007D3366 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9465C5287498E5007D3366 /* User.swift */; };
 		0B9465C828749FEB007D3366 /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9465C728749FEB007D3366 /* AboutUserViewController.swift */; };
+		0B9871B228757828004D32CE /* InformationAboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9871B128757828004D32CE /* InformationAboutUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0B653D93286EDBF000A6FCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B9465C5287498E5007D3366 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B9465C728749FEB007D3366 /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
+		0B9871B128757828004D32CE /* InformationAboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAboutUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B228EB3287584B5005DCBC8 /* InformationViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B9465C728749FEB007D3366 /* AboutUserViewController.swift */,
+				0B9871B128757828004D32CE /* InformationAboutUserViewController.swift */,
+			);
+			path = InformationViewControllers;
+			sourceTree = "<group>";
+		};
 		0B653D79286EDBEF00A6FCF1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +98,7 @@
 			children = (
 				0B584D3F286EEAB1003A96FD /* WelcomeViewController.swift */,
 				0B653D89286EDBEF00A6FCF1 /* LoginViewController.swift */,
-				0B9465C728749FEB007D3366 /* AboutUserViewController.swift */,
+				0B228EB3287584B5005DCBC8 /* InformationViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9871B228757828004D32CE /* InformationAboutUserViewController.swift in Sources */,
 				0B653D8A286EDBEF00A6FCF1 /* LoginViewController.swift in Sources */,
 				0B584D40286EEAB1003A96FD /* WelcomeViewController.swift in Sources */,
 				0B653D86286EDBEF00A6FCF1 /* AppDelegate.swift in Sources */,
@@ -340,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -368,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

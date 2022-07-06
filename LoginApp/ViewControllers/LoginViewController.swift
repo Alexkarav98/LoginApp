@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
             if let firstVC = viewController as? WelcomeViewController {
                 firstVC.fullName =  user.fullName
             } else if let secondVC = viewController as? AboutUserViewController {
-                secondVC.fullName = user.fullName
+                secondVC.user = user
             }
         }
     }
@@ -42,10 +42,7 @@ class LoginViewController: UIViewController {
             showAllert(title: "Invalid login or password",
                        message: "Please enter correct login and password",
                        textField: passwordTF)
-        } else if loginTF.text == user.login && passwordTF.text == user.password {
-            
         }
-        
     }
     
     // MARK: Hide keyboard aftertouches
